@@ -38,6 +38,13 @@ pipeline {
                 }
             }
         }
+
+        stage("Unit Test") {
+            steps {
+                sh "echo unit tests"
+                sh "mvn test"
+            }
+        }
         stage ("Generating Artifact") {
             steps {
                 sh "echo generating Artifact"
