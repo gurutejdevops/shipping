@@ -21,5 +21,17 @@ pipeline {
                 sh "mvn clean package"
             }
         }
+
+        stage ("SonarQUbe Scan") {
+            steps {
+                withSonarQubeEnv('SonarQube-Server') {
+                    sh '''
+                        mvn sonar:sonar \
+                        -Dsonar.projectKey=shipping \
+                        -Dsonar.projectName=shipping
+                    '''
+                }
+            }
+        }
     }
 }
