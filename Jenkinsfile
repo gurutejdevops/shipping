@@ -3,7 +3,7 @@ pipeline {
 
     tools {
          maven 'maven-3.9.0'
-         sonarScanner 'sonarscanner-4.5.0.2216'
+        //  sonarScanner 'sonarscanner-4.5.0.2216'
     }
 
     stages {
