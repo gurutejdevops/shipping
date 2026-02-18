@@ -2,7 +2,13 @@ package com.instana.robotshop.shipping;
 
 import javax.persistence.Table;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+import javax.persistence.Table;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
@@ -42,7 +48,6 @@ public class Code {
 
     @Override
     public String toString() {
-        return String.format("Code: %s Name: %s", this.code, this.name);
         return String.format("Code: %s Name: %s", this.code, this.name);
     }
 }
