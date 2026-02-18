@@ -13,5 +13,12 @@ pipeline {
                 sh "echo LintChecks completed"
             }
         }
+
+        stage ("Generating Artifact") {
+            steps {
+                sh "echo generating Artifact"
+                sh "mvn clean package"
+            }
+        }
     }
 }
