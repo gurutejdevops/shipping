@@ -14,6 +14,12 @@ pipeline {
                 sh "echo LintChecks completed"
             }
         }
+        stage ("Code Compile") {
+            steps {
+                sh "echo Code compile"
+                sh "mvn clean compile"
+            }
+        }
         stage ("SonarQUbe Scan") {
             steps {
                 withSonarQubeEnv('SonarQube-Server') {
