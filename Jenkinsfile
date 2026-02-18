@@ -14,14 +14,6 @@ pipeline {
                 sh "echo LintChecks completed"
             }
         }
-
-        stage ("Generating Artifact") {
-            steps {
-                sh "echo generating Artifact"
-                sh "mvn clean package"
-            }
-        }
-
         stage ("SonarQUbe Scan") {
             steps {
                 withSonarQubeEnv('SonarQube-Server') {
@@ -33,5 +25,13 @@ pipeline {
                 }
             }
         }
+        stage ("Generating Artifact") {
+            steps {
+                sh "echo generating Artifact"
+                sh "mvn clean package"
+            }
+        }
+
+
     }
 }
