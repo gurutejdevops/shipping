@@ -51,6 +51,11 @@ pipeline {
                 sh "mvn clean package"
             }
         }
+        stage ("Uploading Artifact") {
+            steps {
+                sh "uploading Artifact"
+            }
+        }
 
     }
 }
