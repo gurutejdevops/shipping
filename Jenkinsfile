@@ -52,8 +52,8 @@ pipeline {
             }
             steps {
                 sh "echo generating Artifact"
-                sh "mvn clean package"
-                
+                sh "mvn clean package -DskipTests"
+
             }
         }
         stage ("Uploading Artifact") {
@@ -62,6 +62,7 @@ pipeline {
             }
             steps {
                 sh "echo uploading Artifact"
+                sh "mvn deploy -DskipTests"
             }
         }
 
