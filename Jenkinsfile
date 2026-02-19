@@ -53,7 +53,7 @@ pipeline {
         }
         stage ("Uploading Artifact") {
             steps {
-                sh "uploading Artifact"
+                sh "echo uploading Artifact"
             }
         }
 
