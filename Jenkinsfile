@@ -46,12 +46,18 @@ pipeline {
             }
         }
         stage ("Generating Artifact") {
+            when {
+                expression {env.TAG_NAME != null }
+            }
             steps {
                 sh "echo generating Artifact"
                 sh "mvn clean package"
             }
         }
         stage ("Uploading Artifact") {
+            when {
+                expression {env.TAG_NAME != null }
+            }
             steps {
                 sh "echo uploading Artifact"
             }
