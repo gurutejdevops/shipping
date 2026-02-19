@@ -43,7 +43,6 @@ pipeline {
             steps {
                 sh "echo unit tests"
                 sh "mvn test"
-                sh "unit test completed"
             }
         }
         stage ("Generating Artifact") {
