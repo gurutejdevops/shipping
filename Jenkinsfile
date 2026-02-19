@@ -49,7 +49,6 @@ pipeline {
             steps {
                 sh "echo generating Artifact"
                 sh "mvn clean package"
-                sh "Artifact generated"
             }
         }
 
