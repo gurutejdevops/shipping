@@ -29,7 +29,7 @@ pipeline {
                 //         -Dsonar.projectKey=shipping \
                 //         -Dsonar.projectName=shipping
                 //     '''
-                }
+                // }
             }
         }
         // stage("Quality Gate") {
@@ -48,7 +48,7 @@ pipeline {
         }
         stage ("Generating Artifact") {
             when {
-                expression {env.TAG_NAME != null }
+                expression { env.TAG_NAME != null }
             }
             steps {
                 sh "echo generating Artifact"
@@ -57,7 +57,7 @@ pipeline {
         }
         stage ("Uploading Artifact") {
             when {
-                expression {env.TAG_NAME != null }
+                expression { env.TAG_NAME != null }
             }
             steps {
                 sh "echo uploading Artifact"
