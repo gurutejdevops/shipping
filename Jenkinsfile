@@ -20,18 +20,18 @@ pipeline {
                 sh "mvn clean compile"
             }
         }
-        stage ("SonarQUbe Scan") {
-            steps {
-                sh "echo sonarqube scanning started"
-                // withSonarQubeEnv('SonarQube-Server') {
-                //     sh '''
-                //         mvn sonar:sonar \
-                //         -Dsonar.projectKey=shipping \
-                //         -Dsonar.projectName=shipping
-                //     '''
-                // }
-            }
-        }
+        // stage ("SonarQUbe Scan") {
+        //     steps {
+        //         sh "echo sonarqube scanning started"
+        //         // withSonarQubeEnv('SonarQube-Server') {
+        //         //     sh '''
+        //         //         mvn sonar:sonar \
+        //         //         -Dsonar.projectKey=shipping \
+        //         //         -Dsonar.projectName=shipping
+        //         //     '''
+        //         // }
+        //     }
+        // }
         // stage("Quality Gate") {
         //     steps {
         //         timeout(time: 5, unit: 'MINUTES') {
